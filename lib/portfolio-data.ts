@@ -495,13 +495,50 @@ export const projects: Project[] = [];
 
 export const certificatesData: CertificateItem[] = [
   {
+    id: "darshan-university-web-frontier",
+    title: "Web Frontier Technical Hackathon",
+    type: "Technical Hackathon",
+    eventName: "Web Frontier",
+    symposium: "Code. Create. Conquer.",
+    category: "Web Development",
+    recipient: "Bansi Jethava",
+    organizer: "Darshan University, Rajkot",
+    date: "September 19, 2024",
+    location: "Rajkot, Gujarat",
+    officialText:
+      "Web Frontier Technical Hackathon: Code. Create. Conquer. HTML: Skeleton of the Web at Darshan University.",
+    description:
+      "Participated in the Web Frontier technical hackathon at Darshan University, building a modern responsive web project focused on semantic HTML5 structure, clean styling, and rapid problem-solving under competitive constraints.",
+    skillsDemonstrated: [
+      "Web Development",
+      "HTML5 & Semantic Structure",
+      "Responsive Layouts",
+      "Hackathon Sprint",
+    ],
+    supporters: [
+      "Department of Computer Engineering, Darshan University",
+      "Faculty Coordinators: Prof. Ankit Koyani & Prof. Hetasvi Vyas",
+    ],
+    signatories: [
+      {
+        name: "Prof. Ankit Koyani",
+        designation: "Faculty Coordinator",
+      },
+      {
+        name: "Prof. Hetasvi Vyas",
+        designation: "Faculty Coordinator",
+      },
+    ],
+    imagePath: "/images/web-frontier-hackathon.jpg",
+  },
+  {
     id: "technoplanet-2025-code-2-web",
     title: "Certificate of Participation",
     type: "National Technical Event",
     eventName: "Code-2-Web",
     symposium: "Technoplanet 2025",
     category: "Web Development",
-    recipient: "Bansi Jethva",
+    recipient: "Bansi Jethava",
     organizer: "RK University, Rajkot",
     date: "September 26, 2025",
     location: "Rajkot, Gujarat",
@@ -517,8 +554,7 @@ export const certificatesData: CertificateItem[] = [
     ],
     supporters: [
       "School of Diploma Studies & Engineering, RK University",
-      "Institution's Innovation Council (IIC)",
-      "SSIP Gujarat",
+      "Institution's Innovation Council (IIC) & SSIP Gujarat",
     ],
     signatories: [
       {
