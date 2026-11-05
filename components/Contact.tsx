@@ -373,10 +373,12 @@ export default function Contact() {
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#182030] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <GitHubIcon className="w-4 h-4 text-[#111827] dark:text-white group-hover:scale-110 transition-transform" />
-                <span>GitHub</span>
+                <span className="inline-flex items-center gap-2">
+                  <GitHubIcon className="w-4 h-4 text-[#111827] dark:text-white group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span>GitHub</span>
+                </span>
               </Link>
 
               {/* LinkedIn Pill */}
@@ -384,10 +386,12 @@ export default function Contact() {
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#182030] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <LinkedInIcon className="w-4 h-4 text-[#0A66C2] group-hover:scale-110 transition-transform" />
-                <span>LinkedIn</span>
+                <span className="inline-flex items-center gap-2">
+                  <LinkedInIcon className="w-4 h-4 text-[#0A66C2] group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span>LinkedIn</span>
+                </span>
               </Link>
 
               {/* Instagram Pill */}
@@ -395,10 +399,12 @@ export default function Contact() {
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#182030] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <InstagramIcon className="w-4 h-4 text-[#E1306C] group-hover:scale-110 transition-transform" />
-                <span>Instagram</span>
+                <span className="inline-flex items-center gap-2">
+                  <InstagramIcon className="w-4 h-4 text-[#E1306C] group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span>Instagram</span>
+                </span>
               </Link>
             </div>
           </div>
