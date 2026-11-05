@@ -65,18 +65,13 @@ export default function Skills() {
           {skillsData.map((category) => (
             <div key={category.title} className="space-y-6">
               {/* Category Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#E5E7EB] dark:border-white/[0.10]">
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#111827] dark:text-white tracking-tight">
-                    {category.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#6B7280] dark:text-slate-400 mt-0.5">
-                    {category.description}
-                  </p>
-                </div>
-                <span className="self-start sm:self-auto text-xs font-semibold text-[#FF5757] dark:text-[#FF8080] bg-[#FFE6E4] dark:bg-[#FF6B6B]/12 dark:border dark:border-[#FF6B6B]/30 px-3.5 py-1 rounded-full">
-                  {category.badge}
-                </span>
+              <div className="pb-3 border-b border-[#E5E7EB] dark:border-white/[0.10]">
+                <h3 className="text-lg sm:text-xl font-bold text-[#111827] dark:text-white tracking-tight">
+                  {category.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-[#6B7280] dark:text-slate-400 mt-0.5">
+                  {category.description}
+                </p>
               </div>
 
               {/* Skills Grid */}
