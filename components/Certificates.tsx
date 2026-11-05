@@ -59,24 +59,24 @@ export default function Certificates() {
                 {/* Header Meta: Event Type, Date, Location */}
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-[#F3F4F6] dark:border-white/[0.08]">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 text-[#FF5757] dark:text-[#FF7D77] text-xs font-semibold tracking-wide">
-                      <Sparkles className="w-3 h-3" />
-                      {cert.type}
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 text-[#FF5757] dark:text-[#FF7D77] text-[11px] sm:text-xs font-semibold tracking-wide whitespace-nowrap">
+                      <Sparkles className="w-3 h-3 flex-shrink-0" />
+                      <span>{cert.type}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F3F4F6] dark:bg-[#182030] text-[#4B5563] dark:text-slate-300 text-xs font-medium">
-                      <Building2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77]" />
-                      {cert.organizer}
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#F3F4F6] dark:bg-[#182030] text-[#4B5563] dark:text-slate-300 text-[11px] sm:text-xs font-medium whitespace-nowrap">
+                      <Building2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77] flex-shrink-0" />
+                      <span>{cert.organizer}</span>
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-4 text-xs font-medium text-[#6B7280] dark:text-slate-400">
+                  <div className="flex items-center gap-3 text-[11px] sm:text-xs font-medium text-[#6B7280] dark:text-slate-400 whitespace-nowrap">
                     <span className="inline-flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-[#FF5757] dark:text-[#FF7D77]" />
-                      {cert.date}
+                      <Calendar className="w-3.5 h-3.5 text-[#FF5757] dark:text-[#FF7D77] flex-shrink-0" />
+                      <span>{cert.date}</span>
                     </span>
                     <span className="hidden sm:inline-flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-[#FF5757] dark:text-[#FF7D77]" />
-                      {cert.location}
+                      <MapPin className="w-3.5 h-3.5 text-[#FF5757] dark:text-[#FF7D77] flex-shrink-0" />
+                      <span>{cert.location}</span>
                     </span>
                   </div>
                 </div>
@@ -85,14 +85,14 @@ export default function Certificates() {
                 <div className="mt-5 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                   <div className="lg:col-span-8 space-y-4">
                     <div>
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#FF5757] dark:text-[#FF7D77] mb-1">
-                        <Code2 className="w-4 h-4" />
-                        <span>Event: {cert.eventName} &bull; {cert.symposium}</span>
+                      <div className="flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#FF5757] dark:text-[#FF7D77] mb-1">
+                        <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
+                        <span className="truncate whitespace-nowrap">Event: {cert.eventName} &bull; {cert.symposium}</span>
                       </div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-[#111827] dark:text-white tracking-tight">
+                      <h3 className="text-lg sm:text-2xl font-bold text-[#111827] dark:text-white tracking-tight">
                         {cert.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-semibold text-[#4B5563] dark:text-slate-300 mt-1">
+                      <p className="text-xs sm:text-sm font-semibold text-[#4B5563] dark:text-slate-300 mt-1 whitespace-nowrap">
                         Awarded to: <strong className="text-[#111827] dark:text-white font-bold">{cert.recipient}</strong>
                       </p>
                     </div>
@@ -107,13 +107,13 @@ export default function Certificates() {
                       <span className="text-xs font-semibold uppercase tracking-wider text-[#6B7280] dark:text-slate-400 block mb-2">
                         Core Competencies:
                       </span>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {cert.skillsDemonstrated.map((skill, index) => (
                           <span
                             key={index}
-                            className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg bg-[#F8FAFC] dark:bg-[#182030] border border-[#E5E7EB] dark:border-white/[0.06] text-[#1F2937] dark:text-slate-200 font-medium"
+                            className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs px-2.5 py-1 rounded-lg bg-[#F8FAFC] dark:bg-[#182030] border border-[#E5E7EB] dark:border-white/[0.06] text-[#1F2937] dark:text-slate-200 font-medium whitespace-nowrap"
                           >
-                            <CheckCircle2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77]" />
+                            <CheckCircle2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77] flex-shrink-0" />
                             <span>{skill}</span>
                           </span>
                         ))}

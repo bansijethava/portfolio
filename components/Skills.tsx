@@ -89,14 +89,14 @@ export default function Skills() {
                     >
                       <div>
                         {/* Card Top Meta */}
-                        <div className="flex items-center gap-3.5 mb-4">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 flex items-center justify-center flex-shrink-0">
+                        <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 flex items-center justify-center flex-shrink-0">
                             {pillarIcons[skill.name] || (
                               <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF5757] dark:text-[#FF7D77]" />
                             )}
                           </div>
                           <div className="min-w-0">
-                            <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight">
+                            <h4 className="text-[15px] sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight whitespace-nowrap">
                               {skill.name}
                             </h4>
                           </div>
@@ -117,9 +117,9 @@ export default function Skills() {
                           {skill.keyTopics.map((topic, i) => (
                             <span
                               key={i}
-                              className="text-xs px-2.5 py-1 rounded-lg bg-[#FAFAFA] dark:bg-[#182030] border border-[#F3F4F6] dark:border-white/[0.06] text-[#1F2937] dark:text-slate-200 font-medium flex items-center gap-1.5 hover:dark:border-[#FF5757]/30 transition-colors"
+                              className="text-[11px] sm:text-xs px-2.5 py-1 rounded-lg bg-[#FAFAFA] dark:bg-[#182030] border border-[#F3F4F6] dark:border-white/[0.06] text-[#1F2937] dark:text-slate-200 font-medium flex items-center gap-1.5 whitespace-nowrap hover:dark:border-[#FF5757]/30 transition-colors"
                             >
-                              <CheckCircle2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77]" />
+                              <CheckCircle2 className="w-3 h-3 text-[#FF5757] dark:text-[#FF7D77] flex-shrink-0" />
                               <span>{topic}</span>
                             </span>
                           ))}

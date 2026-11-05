@@ -144,9 +144,9 @@ export default function Projects() {
 
               {/* Learning Focus Tag & GitHub Link */}
               <div className="mt-6 sm:mt-7 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-                <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-[#FFF5F5] dark:bg-[#182030] border border-[#FFE6E4] dark:border-[#FF5757]/30 text-xs font-semibold text-[#FF5757] dark:text-[#FF7D77] text-center">
+                <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-[#FFF5F5] dark:bg-[#182030] border border-[#FFE6E4] dark:border-[#FF5757]/30 text-xs font-semibold text-[#FF5757] dark:text-[#FF7D77] text-center whitespace-nowrap">
                   <span className="w-2 h-2 rounded-full bg-[#FF5757] animate-pulse flex-shrink-0" />
-                  <span>Upcoming: C programming repositories &amp; web projects</span>
+                  <span>Upcoming: C repos &amp; Web projects</span>
                 </div>
                 <Link
                   href={siteConfig.github}

@@ -105,13 +105,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* LHS: Brand Name matching the reference layout */}
+        {/* LHS: Brand Name */}
         <Link
           href="#home"
-          className="select-none group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5757] rounded-lg"
+          className="select-none group px-3 py-1.5 rounded-full bg-[#FFF2F1] dark:bg-[#131926] border border-[#FFD6D3] dark:border-[#FF5757]/30 shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_25px_rgba(255,87,87,0.15)] backdrop-blur-md lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0"
           aria-label="Bansi Jethava - Home"
         >
-          <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] dark:text-white leading-tight">
+          <span className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] dark:text-white leading-tight">
             Bansi{" "}
             <span className="text-[#FF5757] dark:text-[#FF7D77] font-bold">
               Jethava
