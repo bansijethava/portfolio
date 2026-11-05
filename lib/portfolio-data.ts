@@ -495,6 +495,39 @@ export const projects: Project[] = [];
 
 export const certificatesData: CertificateItem[] = [
   {
+    id: "gdg-build-with-ai-2026",
+    title: "Attendee — Build with AI 2026",
+    type: "Google Developer Program",
+    eventName: "Build with AI",
+    symposium: "Google Developer Groups (GDG)",
+    category: "AI & Modern Web",
+    recipient: "Bansi Jethava",
+    organizer: "Google Developer Groups (GDG)",
+    date: "November 1, 2026",
+    location: "Rajkot, Gujarat",
+    officialText:
+      "Attended Build with AI 2026 event. Official digital badge credential issued by Google Developer Program.",
+    description:
+      "Active participant in Google Developer Groups (GDG) community sessions. Attended 'Build with AI' exploring practical generative AI tools, modern web interfaces, and agentic coding workflows with Google Antigravity.",
+    skillsDemonstrated: [
+      "Generative AI",
+      "Google Antigravity",
+      "Modern Web Development",
+      "Prompt Engineering",
+    ],
+    supporters: [
+      "Google Developer Groups (GDG)",
+      "Google Developers Community",
+    ],
+    signatories: [
+      {
+        name: "Google Developer Groups",
+        designation: "Community Lead",
+      },
+    ],
+    imagePath: "/images/build-with-ai-badge.png",
+  },
+  {
     id: "darshan-university-web-frontier",
     title: "Web Frontier Technical Hackathon",
     type: "Technical Hackathon",
