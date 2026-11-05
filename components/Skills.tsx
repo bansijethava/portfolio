@@ -8,7 +8,6 @@ import {
   Globe,
   CheckCircle2,
   Sparkles,
-  Check,
 } from "lucide-react";
 
 export default function Skills() {
@@ -83,8 +82,6 @@ export default function Skills() {
               {/* Skills Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {category.skills.map((skill) => {
-                  const isCompleted = skill.status === "completed";
-
                   return (
                     <div
                       key={skill.name}
@@ -92,31 +89,17 @@ export default function Skills() {
                     >
                       <div>
                         {/* Card Top Meta */}
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 flex items-center justify-center flex-shrink-0">
-                              {pillarIcons[skill.name] || (
-                                <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF5757] dark:text-[#FF7D77]" />
-                              )}
-                            </div>
-                            <div className="min-w-0">
-                              <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight whitespace-nowrap">
-                                {skill.name}
-                              </h4>
-                            </div>
+                        <div className="flex items-center gap-3.5 mb-4">
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 flex items-center justify-center flex-shrink-0">
+                            {pillarIcons[skill.name] || (
+                              <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF5757] dark:text-[#FF7D77]" />
+                            )}
                           </div>
-
-                          {/* Level Badge */}
-                          <span
-                            className={`self-start sm:self-auto text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0 ${
-                              isCompleted
-                                ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-700/60 flex items-center gap-1"
-                                : "bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700/60"
-                            }`}
-                          >
-                            {isCompleted && <Check className="w-3 h-3" />}
-                            {skill.level}
-                          </span>
+                          <div className="min-w-0">
+                            <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight">
+                              {skill.name}
+                            </h4>
+                          </div>
                         </div>
 
                         {/* Description Context */}
