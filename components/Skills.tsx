@@ -13,24 +13,24 @@ import {
 
 export default function Skills() {
   const pillarIcons: Record<string, React.ReactNode> = {
-    "C Programming Language": <Code2 className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />,
+    "C Programming": <Code2 className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />,
     "Python Programming": <Code2 className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />,
-    "Data Structures & Algorithms (DSA in C)": (
+    "Data Structures & Algorithms": (
       <Binary className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
-    "SQL & Relational Databases (RDBMS)": (
+    "SQL & Relational Databases": (
       <Database className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
-    "Operating Systems & Systems Architecture": (
+    "Operating Systems": (
       <Cpu className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
-    "Digital Logic Design & Object-Oriented C++": (
+    "Digital Logic & C++": (
       <Layers className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
-    "Responsive Web Development & UI Design": (
+    "Responsive Web Development": (
       <Globe className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
-    "Modern Frontend Ecosystem": (
+    "Modern Frontend": (
       <Sparkles className="w-6 h-6 text-[#FF5757] dark:text-[#FF7D77]" />
     ),
   };
@@ -93,14 +93,14 @@ export default function Skills() {
                       <div>
                         {/* Card Top Meta */}
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-                          <div className="flex items-start sm:items-center gap-3 min-w-0">
+                          <div className="flex items-center gap-3 min-w-0">
                             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 flex items-center justify-center flex-shrink-0">
                               {pillarIcons[skill.name] || (
                                 <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF5757] dark:text-[#FF7D77]" />
                               )}
                             </div>
                             <div className="min-w-0">
-                              <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight break-words">
+                              <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight whitespace-nowrap">
                                 {skill.name}
                               </h4>
                             </div>

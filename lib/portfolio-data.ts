@@ -335,7 +335,7 @@ export const skillsData: SkillCategory[] = [
       "Core languages mastered through coursework, practical labs, and algorithmic problem-solving.",
     skills: [
       {
-        name: "C Programming Language",
+        name: "C Programming",
         level: "Proficient & Completed",
         category: "System & Core Programming",
         status: "completed",
@@ -371,7 +371,7 @@ export const skillsData: SkillCategory[] = [
       "Computer science pillars studied thoroughly with end-to-end practical implementations.",
     skills: [
       {
-        name: "Data Structures & Algorithms (DSA in C)",
+        name: "Data Structures & Algorithms",
         level: "Proficient & Completed",
         category: "Computer Science Foundation",
         status: "completed",
@@ -385,7 +385,7 @@ export const skillsData: SkillCategory[] = [
         ],
       },
       {
-        name: "SQL & Relational Databases (RDBMS)",
+        name: "SQL & Relational Databases",
         level: "Proficient & Completed",
         category: "Database Engineering",
         status: "completed",
@@ -407,7 +407,7 @@ export const skillsData: SkillCategory[] = [
       "Systems fundamentals from semesters 1, 2, and 3 alongside focused interest in modern web development.",
     skills: [
       {
-        name: "Operating Systems & Systems Architecture",
+        name: "Operating Systems",
         level: "Coursework Completed",
         category: "Systems & Infrastructure",
         status: "completed",
@@ -421,7 +421,7 @@ export const skillsData: SkillCategory[] = [
         ],
       },
       {
-        name: "Digital Logic Design & Object-Oriented C++",
+        name: "Digital Logic & C++",
         level: "Coursework Completed",
         category: "Hardware & OOP",
         status: "completed",
@@ -434,7 +434,7 @@ export const skillsData: SkillCategory[] = [
         ],
       },
       {
-        name: "Responsive Web Development & UI Design",
+        name: "Responsive Web Development",
         level: "Proficient & Completed",
         category: "Web Engineering",
         status: "completed",
@@ -448,7 +448,7 @@ export const skillsData: SkillCategory[] = [
         ],
       },
       {
-        name: "Modern Frontend Ecosystem",
+        name: "Modern Frontend",
         level: "Active Exploration",
         category: "Future Exploration",
         status: "learning-goal",
