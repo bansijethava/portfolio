@@ -100,9 +100,6 @@ export default function Skills() {
                               )}
                             </div>
                             <div className="min-w-0">
-                              <span className="text-xs font-semibold uppercase tracking-wider text-[#9CA3AF] dark:text-slate-400 block">
-                                {skill.category}
-                              </span>
                               <h4 className="text-base sm:text-lg font-bold text-[#111827] dark:text-white tracking-tight break-words">
                                 {skill.name}
                               </h4>
