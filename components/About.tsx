@@ -6,12 +6,12 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="py-20 sm:py-28 bg-white dark:bg-[#0A0D14] border-t border-[#F3F4F6] dark:border-white/[0.08] transition-colors duration-200"
+      className="py-20 sm:py-28 bg-white dark:bg-[#080B12] border-t border-[#F3F4F6] dark:border-white/[0.10] transition-colors duration-200"
     >
       <div className="section-container">
         {/* Section Header: Aligned Left Matching Other Sections */}
         <div className="max-w-3xl mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFE6E4] dark:bg-[#FF5757]/15 dark:border dark:border-[#FF5757]/30 text-[#FF5757] dark:text-[#FF7D77] text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFE6E4] dark:bg-[#FF6B6B]/12 dark:border dark:border-[#FF6B6B]/30 text-[#FF5757] dark:text-[#FF8080] text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Background &amp; Mindset</span>
           </div>
@@ -27,7 +27,7 @@ export default function About() {
         </div>
 
         {/* Narrative & Philosophy Content - Aligned Left */}
-        <div className="max-w-3xl space-y-4 text-sm sm:text-base text-[#4B5563] dark:text-slate-300 leading-relaxed font-normal">
+        <div className="max-w-3xl space-y-4 text-sm sm:text-base text-[#4B5563] dark:text-slate-200 leading-relaxed font-normal">
           <p>
             I am a{" "}
             <strong className="text-[#111827] dark:text-white font-bold">
@@ -54,8 +54,8 @@ export default function About() {
           </p>
 
           {/* Clean Inline Motto Aligned Left */}
-          <div className="pt-2 flex items-center gap-2 text-xs sm:text-sm font-medium italic text-[#111827] dark:text-slate-200">
-            <Heart className="w-4 h-4 text-[#FF5757] dark:text-[#FF7D77] fill-[#FF5757] dark:fill-[#FF7D77] flex-shrink-0" />
+          <div className="pt-2 flex items-center gap-2 text-xs sm:text-sm font-medium italic text-[#111827] dark:text-slate-100">
+            <Heart className="w-4 h-4 text-[#FF5757] dark:text-[#FF8080] fill-[#FF5757] dark:fill-[#FF7D77] flex-shrink-0" />
             <span>&ldquo;{siteConfig.philosophy}&rdquo;</span>
           </div>
         </div>

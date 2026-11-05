@@ -108,10 +108,10 @@ export default function Navbar() {
         {/* LHS: Brand Name */}
         <Link
           href="#home"
-          className="select-none group px-3 py-1.5 rounded-full bg-[#FFF2F1] dark:bg-[#131926] border border-[#FFD6D3] dark:border-[#FF5757]/30 shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_25px_rgba(255,87,87,0.15)] backdrop-blur-md lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0"
+          className="select-none group px-3 py-1.5 rounded-full bg-[#FFF2F1] dark:bg-[#0F1520]/90 border border-[#FFD6D3] dark:border-white/[0.12] shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] backdrop-blur-md lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0"
           aria-label="Bansi Jethava - Home"
         >
-          <span className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] dark:text-white leading-tight">
+          <span className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] dark:text-[#F1F5F9] leading-tight">
             Bansi{" "}
             <span className="text-[#FF5757] dark:text-[#FF7D77] font-bold">
               Jethava
@@ -120,7 +120,7 @@ export default function Navbar() {
         </Link>
 
         {/* RHS: Navigation Menu Capsule Pill (Desktop) matching reference */}
-        <div className="hidden lg:flex items-center rounded-full bg-[#FFF2F1] dark:bg-[#131926] border border-[#FFD6D3] dark:border-[#FF5757]/30 shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_25px_rgba(255,87,87,0.15)] px-3.5 xl:px-5 py-1.5 xl:py-2 backdrop-blur-md">
+        <div className="hidden lg:flex items-center rounded-full bg-[#FFF2F1] dark:bg-[#0F1520]/95 border border-[#FFD6D3] dark:border-white/[0.10] shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.6)] px-3.5 xl:px-5 py-1.5 xl:py-2 backdrop-blur-md">
           {/* Menu Items */}
           <nav
             className="flex items-center gap-0.5 xl:gap-1.5"
@@ -190,7 +190,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile / Tablet Compact Pill */}
-        <div className="flex lg:hidden items-center rounded-full bg-[#FFF2F1] dark:bg-[#131926] border border-[#FFD6D3] dark:border-[#FF5757]/30 shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_25px_rgba(255,87,87,0.15)] px-2.5 py-1.5 gap-1 backdrop-blur-md">
+        <div className="flex lg:hidden items-center rounded-full bg-[#FFF2F1] dark:bg-[#0F1520]/95 border border-[#FFD6D3] dark:border-white/[0.10] shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.6)] px-2.5 py-1.5 gap-1 backdrop-blur-md">
           {/* Mobile Theme Toggle */}
           <button
             type="button"
@@ -224,7 +224,7 @@ export default function Navbar() {
       {/* Mobile Navigation Dropdown */}
       {mobileMenuOpen && (
         <div className="lg:hidden max-w-7xl mx-auto px-4 sm:px-6 pt-2 animate-in fade-in slide-in-from-top-2">
-          <div className="p-4 rounded-3xl bg-[#FFF2F1] dark:bg-[#131926] border border-[#FFD6D3] dark:border-[#FF5757]/30 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+          <div className="p-4 rounded-3xl bg-[#FFF2F1] dark:bg-[#0D1424] border border-[#FFD6D3] dark:border-white/[0.10] shadow-xl dark:shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
             <nav
               className="flex flex-col space-y-1"
               aria-label="Mobile Navigation Menu"
@@ -234,14 +234,14 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-3.5 py-2.5 rounded-2xl text-sm font-semibold text-gray-800 dark:text-slate-200 hover:bg-[#FFE4E1] dark:hover:bg-[#FF5757]/15 hover:text-[#FF5757] dark:hover:text-[#FF7D77] transition-colors"
+                  className="px-3.5 py-2.5 rounded-2xl text-sm font-semibold text-gray-800 dark:text-slate-300 hover:bg-[#FFE4E1] dark:hover:bg-[#FF6B6B]/15 hover:text-[#FF5757] dark:hover:text-[#FF8080] transition-colors"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="pt-3 mt-2 border-t border-[#FFD6D3] dark:border-white/[0.08] flex items-center justify-around">
+            <div className="pt-3 mt-2 border-t border-[#FFD6D3] dark:border-white/[0.10] flex items-center justify-around">
               <Link
                 href={siteConfig.github}
                 target="_blank"

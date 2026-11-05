@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Introduction"
-      className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 lg:pt-44 lg:pb-24 overflow-hidden bg-white dark:bg-[#0A0D14] transition-colors duration-200"
+      className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 lg:pt-44 lg:pb-24 overflow-hidden bg-white dark:bg-[#080B12] transition-colors duration-200"
     >
       <div className="section-container relative">
         {/* Main Center Title Layout */}
@@ -37,7 +37,7 @@ export default function Hero() {
           {/* Heading matching the reference: "I'm Bansi, Computer Engineer" */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold tracking-tight text-[#111827] dark:text-white leading-[1.1] select-none break-words">
             I&apos;m{" "}
-            <span className="text-[#FF5757] dark:text-[#FF6666] dark:drop-shadow-[0_0_35px_rgba(255,87,87,0.45)] inline-block font-extrabold">
+            <span className="text-[#FF5757] dark:text-[#FF7A7A] dark:drop-shadow-[0_0_40px_rgba(255,107,107,0.55)] inline-block font-extrabold">
               {siteConfig.firstName}
             </span>
             ,<br />
@@ -59,7 +59,7 @@ export default function Hero() {
 
             {/* Pastel Circular Backdrop (Coral Pink Arch Disc) */}
             <div
-              className="absolute top-12 sm:top-16 md:top-20 lg:top-24 w-56 h-56 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full bg-[#FFB6B0] dark:bg-gradient-to-tr dark:from-[#FF5757]/30 dark:via-[#FF7D77]/20 dark:to-transparent dark:border dark:border-[#FF5757]/30 dark:shadow-[0_0_60px_rgba(255,87,87,0.2)] z-0 shadow-sm transition-all duration-300"
+              className="absolute top-12 sm:top-16 md:top-20 lg:top-24 w-56 h-56 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full bg-[#FFB6B0] dark:bg-gradient-to-tr dark:from-[#FF6B6B]/35 dark:via-[#FF8080]/22 dark:to-transparent dark:border dark:border-[#FF6B6B]/35 dark:shadow-[0_0_80px_rgba(255,107,107,0.25)] z-0 shadow-sm transition-all duration-300"
               aria-hidden="true"
             />
 
@@ -77,10 +77,10 @@ export default function Hero() {
 
             {/* Floating Glassmorphism Pill Switcher (Pinned over lower torso) */}
             <div className="absolute -bottom-3 sm:-bottom-4 z-30 flex items-center justify-center w-full px-2 sm:px-4">
-              <div className="inline-flex items-center p-1 sm:p-1.5 rounded-full bg-white/90 dark:bg-[#121722]/85 dark:backdrop-blur-xl border border-white/90 dark:border-white/[0.12] shadow-glass dark:shadow-[0_12px_36px_rgba(0,0,0,0.7)] transition-colors">
+              <div className="inline-flex items-center p-1 sm:p-1.5 rounded-full bg-white/90 dark:bg-[#0F1520]/90 dark:backdrop-blur-xl border border-white/90 dark:border-white/[0.14] shadow-glass dark:shadow-[0_12px_40px_rgba(0,0,0,0.8)] transition-colors">
                 <Link
                   href="#skills"
-                  className="px-5 sm:px-7 py-2 sm:py-2.5 rounded-full bg-[#FF5757] text-white text-xs sm:text-sm font-bold shadow-pill dark:shadow-[0_4px_20px_rgba(255,87,87,0.45)] hover:bg-[#E83E3E] transition-all flex items-center gap-1.5 group"
+                  className="px-5 sm:px-7 py-2 sm:py-2.5 rounded-full bg-[#FF5757] text-white text-xs sm:text-sm font-bold shadow-pill dark:shadow-[0_4px_24px_rgba(255,107,107,0.5)] hover:bg-[#E83E3E] transition-all flex items-center gap-1.5 group"
                 >
                   <span>Portfolio ↗</span>
                 </Link>
@@ -99,7 +99,7 @@ export default function Hero() {
           <div className="hidden lg:block absolute inset-0 pointer-events-none z-20">
             {/* Left Column: Quote / Philosophy */}
             <div className="absolute left-2 lg:left-6 top-1/2 -translate-y-6 max-w-[220px] pointer-events-auto text-left">
-              <span className="text-4xl font-serif text-[#111827] dark:text-[#FF7D77] font-bold leading-none block mb-1">
+              <span className="text-4xl font-serif text-[#111827] dark:text-[#FF8585] font-bold leading-none block mb-1">
                 &ldquo;
               </span>
               <p className="text-xs sm:text-sm font-normal text-[#4B5563] dark:text-slate-300 leading-snug">
@@ -133,8 +133,8 @@ export default function Hero() {
           {/* Mobile & Tablet Flanking Elements: Clean 2-card row beneath portrait for screens under 1024px */}
           <div className="grid grid-cols-2 gap-2.5 sm:gap-4 w-full max-w-md mt-8 sm:mt-10 lg:hidden px-2">
             {/* Left: Motto */}
-            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAFAFA] dark:bg-[#121722] border border-[#F3F4F6] dark:border-white/[0.08] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-left">
-              <span className="text-2xl font-serif text-[#111827] dark:text-[#FF7D77] font-bold leading-none block mb-0.5">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAFAFA] dark:bg-[#0F1520] border border-[#F3F4F6] dark:border-white/[0.10] dark:shadow-[0_6px_28px_rgba(0,0,0,0.6)] text-left">
+              <span className="text-2xl font-serif text-[#111827] dark:text-[#FF8585] font-bold leading-none block mb-0.5">
                 &ldquo;
               </span>
               <p className="text-xs sm:text-sm font-medium text-[#4B5563] dark:text-slate-300 leading-snug line-clamp-3">
@@ -143,7 +143,7 @@ export default function Hero() {
             </div>
 
             {/* Right: Academic Status */}
-            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAFAFA] dark:bg-[#121722] border border-[#F3F4F6] dark:border-white/[0.08] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-right flex flex-col items-end justify-between">
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAFAFA] dark:bg-[#0F1520] border border-[#F3F4F6] dark:border-white/[0.10] dark:shadow-[0_6px_28px_rgba(0,0,0,0.6)] text-right flex flex-col items-end justify-between">
               <div className="flex items-center gap-0.5 text-[#FF5757] mb-1">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
@@ -172,7 +172,7 @@ export default function Hero() {
                 AVPTI GTU College, Rajkot
               </strong>
               . Completed Semesters 1, 2 &amp; 3 with strong foundations in{" "}
-              <strong className="text-[#FF5757] dark:text-[#FF7D77] font-semibold">
+              <strong className="text-[#FF5757] dark:text-[#FF8585] font-semibold">
                 C, Python, full DSA, and SQL
               </strong>
               , now actively building toward modern web development.

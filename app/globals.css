@@ -13,13 +13,13 @@
 }
 
 .dark {
-  --background: #0a0d14;
-  --surface: #121722;
-  --foreground: #f8fafc;
-  --secondary: #94a3b8;
-  --primary-accent: #ff5757;
-  --subtle-accent: #182030;
-  --border: rgba(255, 255, 255, 0.08);
+  --background: #080B12;
+  --surface: #0F1520;
+  --foreground: #f1f5f9;
+  --secondary: #8fa3bf;
+  --primary-accent: #FF6B6B;
+  --subtle-accent: #141B2D;
+  --border: rgba(255, 255, 255, 0.10);
   color-scheme: dark;
 }
 
@@ -90,6 +90,24 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+/* Dark theme card enhancement */
+.dark .dark-card-glow {
+  box-shadow: 0 0 0 1px rgba(255, 107, 107, 0.08), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark theme subtle gradient surface */
+@layer utilities {
+  .dark-surface {
+    background: linear-gradient(135deg, #0F1520 0%, #111927 100%);
+  }
+}
+
+/* Dark mode selection */
+.dark ::selection {
+  background-color: rgba(255, 107, 107, 0.25);
+  color: #fff;
 }
 
 /* Playful hand-drawn doodle accent animation */
