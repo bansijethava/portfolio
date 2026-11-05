@@ -495,6 +495,47 @@ export const projects: Project[] = [];
 
 export const certificatesData: CertificateItem[] = [
   {
+    id: "technoplanet-2025-code-2-web",
+    title: "Certificate of Participation",
+    type: "National Technical Event",
+    eventName: "Code-2-Web",
+    symposium: "Technoplanet 2025",
+    category: "Web Development",
+    recipient: "Bansi Jethava",
+    organizer: "RK University, Rajkot",
+    date: "September 26, 2025",
+    location: "Rajkot, Gujarat",
+    officialText:
+      "Presented to Bansi Jethva for participating in Code-2-Web at Technoplanet 2025.",
+    description:
+      "Awarded for participating in the Code-2-Web competition at RK University, demonstrating hands-on web development, responsive UI design, and problem solving under competitive constraints.",
+    skillsDemonstrated: [
+      "Web Development",
+      "HTML & CSS",
+      "Responsive Layouts",
+      "Problem Solving",
+    ],
+    supporters: [
+      "School of Diploma Studies & Engineering, RK University",
+      "Institution's Innovation Council (IIC) & SSIP Gujarat",
+    ],
+    signatories: [
+      {
+        name: "Denish Patel",
+        designation: "Executive Vice President",
+      },
+      {
+        name: "Dr. Amit Lathigara",
+        designation: "Provost",
+      },
+      {
+        name: "Dr. Nirav V. Bhatt",
+        designation: "Director, SOE",
+      },
+    ],
+    imagePath: "/images/code-2-web-certificate.jpg",
+  },
+  {
     id: "gdg-build-with-ai-2026",
     title: "Attendee — Build with AI 2026",
     type: "Google Developer Program",
@@ -561,46 +602,5 @@ export const certificatesData: CertificateItem[] = [
         designation: "Faculty Coordinator",
       },
     ],
-  },
-  {
-    id: "technoplanet-2025-code-2-web",
-    title: "Certificate of Participation",
-    type: "National Technical Event",
-    eventName: "Code-2-Web",
-    symposium: "Technoplanet 2025",
-    category: "Web Development",
-    recipient: "Bansi Jethava",
-    organizer: "RK University, Rajkot",
-    date: "September 26, 2025",
-    location: "Rajkot, Gujarat",
-    officialText:
-      "Presented to Bansi Jethva for participating in Code-2-Web at Technoplanet 2025.",
-    description:
-      "Awarded for participating in the Code-2-Web competition at RK University, demonstrating hands-on web development, responsive UI design, and problem solving under competitive constraints.",
-    skillsDemonstrated: [
-      "Web Development",
-      "HTML & CSS",
-      "Responsive Layouts",
-      "Problem Solving",
-    ],
-    supporters: [
-      "School of Diploma Studies & Engineering, RK University",
-      "Institution's Innovation Council (IIC) & SSIP Gujarat",
-    ],
-    signatories: [
-      {
-        name: "Denish Patel",
-        designation: "Executive Vice President",
-      },
-      {
-        name: "Dr. Amit Lathigara",
-        designation: "Provost",
-      },
-      {
-        name: "Dr. Nirav V. Bhatt",
-        designation: "Director, SOE",
-      },
-    ],
-    imagePath: "/images/code-2-web-certificate.jpg",
   },
 ];
