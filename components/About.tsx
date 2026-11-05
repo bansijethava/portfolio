@@ -6,7 +6,7 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="py-20 sm:py-28 bg-[#FAFAFA] dark:bg-[#0E121B] border-t border-[#F3F4F6] dark:border-white/[0.08] transition-colors duration-200"
+      className="py-20 sm:py-28 bg-white dark:bg-[#0A0D14] border-t border-[#F3F4F6] dark:border-white/[0.08] transition-colors duration-200"
     >
       <div className="section-container">
         {/* Section Header: Aligned Left Matching Other Sections */}

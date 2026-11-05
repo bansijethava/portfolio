@@ -110,7 +110,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-[#F8FAFC] dark:bg-[#0A0D14] text-[#111827] dark:text-[#F8FAFC] font-sans antialiased overflow-x-hidden selection:bg-[#DCE6F2] dark:selection:bg-[#FF5757]/30 selection:text-[#243B65] dark:selection:text-white transition-colors duration-200">
+      <body className="min-h-screen bg-white dark:bg-[#0A0D14] text-[#111827] dark:text-[#F8FAFC] font-sans antialiased overflow-x-hidden selection:bg-[#DCE6F2] dark:selection:bg-[#FF5757]/30 selection:text-[#243B65] dark:selection:text-white transition-colors duration-200">
         {/* WCAG Accessible Skip Link */}
         <a
           href="#main-content"
