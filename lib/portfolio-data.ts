@@ -525,7 +525,6 @@ export const certificatesData: CertificateItem[] = [
         designation: "Community Lead",
       },
     ],
-    imagePath: "/images/build-with-ai-badge.png",
   },
   {
     id: "darshan-university-web-frontier",
