@@ -315,30 +315,30 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Social Media & Contact Links (Represented in Short Below Form, Matching Sample Photo) */}
+          {/* Social Media & Contact Links */}
           <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
-            {/* Row 1: Email and Location Cards (Matching Sample Style) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            {/* Row 1: Email and Location — 2 col on all screens */}
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
               {/* Email Card */}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="group relative flex items-center gap-3 sm:gap-4 p-3.5 sm:p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:border-gray-300 dark:hover:border-white/[0.18] transition-all shadow-xs"
+                className="group relative flex items-center gap-2 sm:gap-4 p-3 sm:p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:border-gray-300 dark:hover:border-white/[0.18] transition-all shadow-xs"
               >
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-[#141B2D] border border-gray-200/80 dark:border-white/[0.10] flex items-center justify-center flex-shrink-0 text-[#111827] dark:text-white shadow-xs group-hover:scale-105 transition-transform">
-                  <Mail className="w-5 h-5 text-[#111827] dark:text-slate-100" />
+                <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-[#141B2D] border border-gray-200/80 dark:border-white/[0.10] flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-105 transition-transform">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#111827] dark:text-slate-100" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold tracking-wider text-[#6B7280] dark:text-slate-400 uppercase">
+                  <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-[#6B7280] dark:text-slate-400 uppercase">
                     EMAIL
                   </p>
-                  <p className="text-xs sm:text-sm md:text-base font-bold text-[#111827] dark:text-white truncate mt-0.5">
+                  <p className="text-[11px] sm:text-sm md:text-base font-bold text-[#111827] dark:text-white truncate mt-0.5">
                     {siteConfig.email}
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="p-1.5 sm:p-2 rounded-lg text-gray-400 hover:text-[#FF5757] hover:bg-white dark:hover:bg-[#182030] transition-colors flex-shrink-0"
+                  className="hidden sm:flex p-1.5 sm:p-2 rounded-lg text-gray-400 hover:text-[#FF5757] hover:bg-white dark:hover:bg-[#182030] transition-colors flex-shrink-0"
                   aria-label="Copy email address"
                   title="Copy email address"
                 >
@@ -351,33 +351,33 @@ export default function Contact() {
               </a>
 
               {/* Location Card */}
-              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] shadow-xs">
-                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-[#141B2D] border border-gray-200/80 dark:border-white/[0.10] flex items-center justify-center flex-shrink-0 text-[#111827] dark:text-white shadow-xs">
-                  <MapPin className="w-5 h-5 text-[#111827] dark:text-slate-100" />
+              <div className="flex items-center gap-2 sm:gap-4 p-3 sm:p-5 rounded-2xl bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] shadow-xs">
+                <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-[#141B2D] border border-gray-200/80 dark:border-white/[0.10] flex items-center justify-center flex-shrink-0 shadow-xs">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#111827] dark:text-slate-100" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold tracking-wider text-[#6B7280] dark:text-slate-400 uppercase">
+                  <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-[#6B7280] dark:text-slate-400 uppercase">
                     LOCATION
                   </p>
-                  <p className="text-xs sm:text-sm md:text-base font-bold text-[#111827] dark:text-white truncate mt-0.5">
+                  <p className="text-[11px] sm:text-sm md:text-base font-bold text-[#111827] dark:text-white truncate mt-0.5">
                     {siteConfig.location}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Row 2: Short Pill Social Media Links (Matching Sample Photo Style) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
+            {/* Row 2: Social pills — 3 col on all screens */}
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {/* GitHub Pill */}
               <Link
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-2.5 sm:py-3.5 px-2 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <span className="inline-flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 sm:gap-2">
                   <GitHubIcon className="w-4 h-4 text-[#111827] dark:text-white group-hover:scale-110 transition-transform flex-shrink-0" />
-                  <span>GitHub</span>
+                  <span className="text-[11px] sm:text-sm">GitHub</span>
                 </span>
               </Link>
 
@@ -386,11 +386,11 @@ export default function Contact() {
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-2.5 sm:py-3.5 px-2 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <span className="inline-flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 sm:gap-2">
                   <LinkedInIcon className="w-4 h-4 text-[#0A66C2] group-hover:scale-110 transition-transform flex-shrink-0" />
-                  <span>LinkedIn</span>
+                  <span className="text-[11px] sm:text-sm">LinkedIn</span>
                 </span>
               </Link>
 
@@ -399,11 +399,11 @@ export default function Contact() {
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center py-3 sm:py-3.5 px-4 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
+                className="flex items-center justify-center py-2.5 sm:py-3.5 px-2 sm:px-6 rounded-full bg-[#F8FAFC] dark:bg-[#0F1520] border border-[#E5E7EB] dark:border-white/[0.10] hover:bg-white dark:hover:bg-[#141B2D] hover:border-gray-300 dark:hover:border-white/[0.18] dark:hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white transition-all group"
               >
-                <span className="inline-flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 sm:gap-2">
                   <InstagramIcon className="w-4 h-4 text-[#E1306C] group-hover:scale-110 transition-transform flex-shrink-0" />
-                  <span>Instagram</span>
+                  <span className="text-[11px] sm:text-sm">Instagram</span>
                 </span>
               </Link>
             </div>
