@@ -332,7 +332,7 @@ export const skillsData: SkillCategory[] = [
     title: "Core Programming Languages",
     badge: "Completed & Verified",
     description:
-      "Core languages mastered through intensive coursework, practical lab implementations, and algorithmic problem-solving.",
+      "Core languages mastered through coursework, practical labs, and algorithmic problem-solving.",
     skills: [
       {
         name: "C Programming Language",
@@ -340,13 +340,12 @@ export const skillsData: SkillCategory[] = [
         category: "System & Core Programming",
         status: "completed",
         context:
-          "Completed full C programming curriculum. Mastered procedural logic, pointer arithmetic, manual memory allocation, complex structures, and modular algorithmic design.",
+          "Procedural logic, pointer arithmetic, dynamic memory allocation, and modular algorithmic design.",
         keyTopics: [
-          "Pointers & Memory Allocation (malloc, calloc, free)",
-          "Control Structures & Modular Functions",
-          "Structures, Unions & Typedefs",
-          "File I/O & Preprocessor Directives",
-          "One-Dimensional & Multi-Dimensional Arrays",
+          "Pointers & Memory Allocation",
+          "Modular Functions",
+          "Structures & Unions",
+          "File I/O & Arrays",
         ],
       },
       {
@@ -355,13 +354,12 @@ export const skillsData: SkillCategory[] = [
         category: "Scripting & Modern Programming",
         status: "completed",
         context:
-          "Completed comprehensive Python curriculum. Proficient in Python syntax, core data collections, functional paradigms, string processing, file operations, and clean modular coding.",
+          "Core data structures, functional paradigms, string processing, and clean modular scripting.",
         keyTopics: [
-          "Lists, Tuples, Dictionaries & Sets",
-          "List Comprehensions & String Methods",
-          "Functions, Lambda Expressions & Modules",
-          "File Handling & OS Operations",
-          "Exception Handling & Defensive Programming",
+          "Data Collections & Dictionaries",
+          "Functions & Modules",
+          "File Handling & OS",
+          "Exception Handling",
         ],
       },
     ],
@@ -370,7 +368,7 @@ export const skillsData: SkillCategory[] = [
     title: "Data Structures & Database Systems",
     badge: "Completed & Verified",
     description:
-      "Advanced computer science pillars studied thoroughly with end-to-end practical implementations.",
+      "Computer science pillars studied thoroughly with end-to-end practical implementations.",
     skills: [
       {
         name: "Data Structures & Algorithms (DSA in C)",
@@ -378,14 +376,12 @@ export const skillsData: SkillCategory[] = [
         category: "Computer Science Foundation",
         status: "completed",
         context:
-          "Completed the entire DSA curriculum implemented in C. Skilled in designing, implementing, and analyzing both linear and non-linear data structures along with search and sort algorithms.",
+          "Linear and non-linear data structures, trees, graphs, and algorithmic complexity in C.",
         keyTopics: [
-          "Linked Lists (Singly, Doubly, Circular)",
-          "Stacks & Queues (Linear, Circular, Priority)",
-          "Binary Search Trees (BST) & Tree Traversals",
-          "Graph Representations & Graph Traversal",
-          "Sorting Algorithms (Merge, Quick, Insertion, Bubble)",
-          "Searching (Binary & Linear) and Time Complexity (Big O)",
+          "Linked Lists, Stacks & Queues",
+          "Trees & Graphs",
+          "Sorting & Searching",
+          "Time Complexity (Big O)",
         ],
       },
       {
@@ -394,13 +390,12 @@ export const skillsData: SkillCategory[] = [
         category: "Database Engineering",
         status: "completed",
         context:
-          "Completed complete relational database management studies. Competent in schema design, relational normalization, complex query writing, table joins, and transactional integrity.",
+          "Relational schema design, normalization, complex queries, table joins, and transactional integrity.",
         keyTopics: [
-          "Relational Schema Design & ER Modeling",
-          "SQL DDL (CREATE, ALTER) & DML (INSERT, UPDATE)",
-          "Complex DQL Queries (JOINs, Subqueries, Group By)",
-          "Integrity Constraints (PK, FK, Unique, Check)",
-          "Database Normalization (1NF, 2NF, 3NF)",
+          "Schema Design & ER Modeling",
+          "Complex Queries & JOINs",
+          "Integrity Constraints",
+          "Database Normalization",
         ],
       },
     ],
@@ -409,7 +404,7 @@ export const skillsData: SkillCategory[] = [
     title: "Computer Science Systems & Web Technologies",
     badge: "Coursework Completed & Active Interest",
     description:
-      "Core systems knowledge from semesters 1, 2, and 3 alongside focused interest in modern web development.",
+      "Systems fundamentals from semesters 1, 2, and 3 alongside focused interest in modern web development.",
     skills: [
       {
         name: "Operating Systems & Systems Architecture",
@@ -417,12 +412,12 @@ export const skillsData: SkillCategory[] = [
         category: "Systems & Infrastructure",
         status: "completed",
         context:
-          "Completed operating systems and computer organization coursework. Understands process scheduling, memory paging, deadlocks, and internal CPU architectures.",
+          "Process scheduling, virtual memory paging, deadlock prevention, and computer organization.",
         keyTopics: [
-          "Process Management & CPU Scheduling",
-          "Virtual Memory & Paging Algorithms",
-          "Deadlock Detection & Prevention",
-          "Computer Organization & Cache Hierarchy",
+          "CPU Scheduling & Processes",
+          "Virtual Memory & Paging",
+          "Deadlock Prevention",
+          "Computer Architecture",
         ],
       },
       {
@@ -431,12 +426,11 @@ export const skillsData: SkillCategory[] = [
         category: "Hardware & OOP",
         status: "completed",
         context:
-          "Studied digital circuitry, combinational/sequential logic gates, Boolean algebra, and object-oriented modeling with C++ classes, inheritance, and polymorphism.",
+          "Digital circuits, Boolean algebra, and object-oriented modeling with C++ classes and polymorphism.",
         keyTopics: [
-          "Boolean Algebra & K-Maps",
-          "Combinational & Sequential Circuits",
-          "Classes, Objects & Encapsulation in C++",
-          "Inheritance, Polymorphism & Overloading",
+          "Logic Gates & Circuits",
+          "Classes & Encapsulation",
+          "Inheritance & Polymorphism",
         ],
       },
       {
@@ -445,12 +439,12 @@ export const skillsData: SkillCategory[] = [
         category: "Web Engineering",
         status: "completed",
         context:
-          "Main area of interest. Completed responsive web design curriculum. Strong focus on semantic HTML5, modern CSS3 Flexbox and Grid layouts, and user-friendly web interfaces.",
+          "Responsive web design with semantic HTML5, modern CSS Grid/Flexbox, and user-friendly interfaces.",
         keyTopics: [
-          "Semantic HTML5 & Accessibility",
-          "Modern CSS3, Flexbox & CSS Grid",
-          "Media Queries & Mobile-First Design",
-          "Interactive Web Layouts & Components",
+          "Semantic HTML5",
+          "CSS3 Flexbox & Grid",
+          "Mobile-First Design",
+          "Interactive Layouts",
         ],
       },
       {
@@ -459,12 +453,11 @@ export const skillsData: SkillCategory[] = [
         category: "Future Exploration",
         status: "learning-goal",
         context:
-          "Currently exploring modern JavaScript frameworks, component-based architectures, and modern web tooling to build practical real-world applications.",
+          "Modern JavaScript frameworks, component-based architectures, and practical web tooling.",
         keyTopics: [
           "Modern JavaScript (ES6+)",
-          "Component-Driven UI Design",
-          "Full-Stack Web Concepts",
-          "Version Control with Git & GitHub",
+          "Component UI Design",
+          "Git & GitHub Workflow",
         ],
       },
     ],

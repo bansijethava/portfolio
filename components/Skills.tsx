@@ -128,10 +128,10 @@ export default function Skills() {
                         </p>
                       </div>
 
-                      {/* Key Competencies / Topics List */}
-                      <div className="mt-6 pt-5 border-t border-[#F3F4F6] dark:border-white/[0.08]">
+                      {/* Key Competencies List */}
+                      <div className="mt-5 pt-4 border-t border-[#F3F4F6] dark:border-white/[0.08]">
                         <span className="text-xs font-semibold uppercase tracking-wider text-[#9CA3AF] dark:text-slate-400 block mb-2.5">
-                          Key Competencies &amp; Lab Implementation:
+                          Key Competencies:
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {skill.keyTopics.map((topic, i) => (
