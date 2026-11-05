@@ -38,9 +38,12 @@ export default function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="py-20 sm:py-28 bg-white dark:bg-[#080B12] border-t border-[#F3F4F6] dark:border-white/[0.10] transition-colors duration-200"
+      className="bg-white dark:bg-[#080B12] transition-colors duration-200"
     >
       <div className="section-container">
+        <div className="w-full border-t border-[#F3F4F6] dark:border-white/[0.10]" />
+      </div>
+      <div className="section-container py-20 sm:py-28">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFE6E4] dark:bg-[#FF6B6B]/12 dark:border dark:border-[#FF6B6B]/30 text-[#FF5757] dark:text-[#FF8080] text-xs font-bold uppercase tracking-wider mb-3">
