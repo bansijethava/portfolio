@@ -2,8 +2,6 @@ import { educationData } from "@/lib/portfolio-data";
 import {
   GraduationCap,
   MapPin,
-  Calendar,
-  Award,
   Layers,
   Sparkles,
 } from "lucide-react";
@@ -57,17 +55,7 @@ export default function Education() {
               </p>
             </div>
 
-            {/* Academic Badges */}
-            <div className="flex flex-wrap items-center gap-2 pt-1 sm:pt-0">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#FFF5F5] dark:bg-[#141B2D] border border-[#FFD1CD] dark:border-[#FF6B6B]/30 text-[11px] sm:text-xs font-bold text-[#FF5757] dark:text-[#FF8080] whitespace-nowrap">
-                <Calendar className="w-3 h-3 text-[#FF5757] dark:text-[#FF8080]" />
-                <span>3rd Sem Completed</span>
-              </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-[11px] sm:text-xs font-bold text-emerald-700 dark:text-emerald-400 whitespace-nowrap">
-                <Award className="w-3 h-3" />
-                <span>Sem 1, 2 &amp; 3 Cleared</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Quick Metrics Bar */}
