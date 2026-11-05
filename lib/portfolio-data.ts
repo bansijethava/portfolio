@@ -529,7 +529,6 @@ export const certificatesData: CertificateItem[] = [
         designation: "Faculty Coordinator",
       },
     ],
-    imagePath: "/images/web-frontier-hackathon.jpg",
   },
   {
     id: "technoplanet-2025-code-2-web",

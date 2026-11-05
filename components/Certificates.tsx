@@ -147,7 +147,7 @@ export default function Certificates() {
                       </div>
                     </div>
 
-                    {/* Button to View Certificate / Poster Photo */}
+                    {/* Button to View Certificate Photo */}
                     {cert.imagePath && (
                       <button
                         type="button"
@@ -155,7 +155,7 @@ export default function Certificates() {
                         className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-white dark:bg-[#182030] border border-[#E5E7EB] dark:border-white/[0.1] text-xs sm:text-sm font-semibold text-[#111827] dark:text-white hover:text-[#FF5757] dark:hover:text-[#FF7D77] hover:border-[#FF5757]/40 dark:hover:border-[#FF5757]/40 hover:shadow-sm transition-all"
                       >
                         <FileText className="w-4 h-4 text-[#FF5757] dark:text-[#FF7D77]" />
-                        <span>View Document / Poster</span>
+                        <span>View Original Certificate</span>
                         <ExternalLink className="w-3.5 h-3.5 text-gray-400 dark:text-slate-500" />
                       </button>
                     )}
