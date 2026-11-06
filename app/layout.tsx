@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AskBansiChat from "@/components/AskBansiChat";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -119,6 +120,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <AskBansiChat />
       </body>
     </html>
   );
