@@ -41,7 +41,7 @@ export default function Certificates() {
             id="certificates-heading"
             className="text-2xl sm:text-3xl font-bold text-[#111827] dark:text-white tracking-tight"
           >
-            Certificates &amp; Achievements
+            Certifications &amp; Events
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#6B7280] dark:text-slate-400 leading-relaxed">
             Verified credentials and technical event certifications.
