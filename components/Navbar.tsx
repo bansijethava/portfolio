@@ -53,20 +53,69 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  const toggleTheme = () => {
+  const toggleTheme = (e?: React.MouseEvent) => {
     const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
 
-    if (nextTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      try {
-        localStorage.setItem("theme", "dark");
-      } catch {}
+    const applyTheme = () => {
+      setTheme(nextTheme);
+      if (nextTheme === "dark") {
+        document.documentElement.classList.add("dark");
+        try {
+          localStorage.setItem("theme", "dark");
+        } catch {}
+      } else {
+        document.documentElement.classList.remove("dark");
+        try {
+          localStorage.setItem("theme", "light");
+        } catch {}
+      }
+    };
+
+    // Smooth fallback CSS transition on all elements
+    document.documentElement.classList.add("theme-transitioning");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("theme-transitioning");
+    }, 500);
+
+    // Modern View Transitions circular ripple wave originating from click coordinates
+    const doc = document as Document & {
+      startViewTransition?: (callback: () => void | Promise<void>) => {
+        ready: Promise<void>;
+      };
+    };
+
+    if (
+      typeof doc.startViewTransition === "function" &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      const x = e?.clientX ?? (window.innerWidth - 60);
+      const y = e?.clientY ?? 35;
+      const endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      const transition = doc.startViewTransition(() => {
+        applyTheme();
+      });
+
+      transition.ready.then(() => {
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${endRadius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration: 520,
+            easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+            pseudoElement: "::view-transition-new(root)",
+          }
+        );
+      });
     } else {
-      document.documentElement.classList.remove("dark");
-      try {
-        localStorage.setItem("theme", "light");
-      } catch {}
+      applyTheme();
     }
   };
 
@@ -167,8 +216,8 @@ export default function Navbar() {
             {/* Theme Toggle Button */}
             <button
               type="button"
-              onClick={toggleTheme}
-              className="p-1.5 rounded-full text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-[#FFE4E1] dark:hover:bg-white/[0.08] transition-colors border-none outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 ring-0"
+              onClick={(e) => toggleTheme(e)}
+              className="p-1.5 rounded-full text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-[#FFE4E1] dark:hover:bg-white/[0.08] transition-all border-none outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 ring-0 active:scale-95 group"
               title={
                 mounted && theme === "dark"
                   ? "Switch to light theme"
@@ -180,11 +229,22 @@ export default function Navbar() {
                   : "Switch to dark theme"
               }
             >
-              {mounted && theme === "dark" ? (
-                <Sun className="w-4 h-4 text-amber-400 transition-transform hover:rotate-45 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
-              ) : (
-                <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300 transition-transform hover:-rotate-12" />
-              )}
+              <span className="relative flex items-center justify-center w-4 h-4 overflow-hidden">
+                <Sun
+                  className={`w-4 h-4 text-amber-400 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    mounted && theme === "dark"
+                      ? "rotate-0 scale-100 opacity-100 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"
+                      : "-rotate-90 scale-0 opacity-0"
+                  }`}
+                />
+                <Moon
+                  className={`w-4 h-4 text-gray-700 dark:text-gray-300 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    mounted && theme === "light"
+                      ? "rotate-0 scale-100 opacity-100"
+                      : "rotate-90 scale-0 opacity-0"
+                  }`}
+                />
+              </span>
             </button>
           </div>
         </div>
@@ -194,15 +254,26 @@ export default function Navbar() {
           {/* Mobile Theme Toggle */}
           <button
             type="button"
-            onClick={toggleTheme}
-            className="p-1.5 rounded-full text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-[#FFE4E1] dark:hover:bg-white/[0.08] transition-colors border-none outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 ring-0"
+            onClick={(e) => toggleTheme(e)}
+            className="p-1.5 rounded-full text-gray-700 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-[#FFE4E1] dark:hover:bg-white/[0.08] transition-all border-none outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 ring-0 active:scale-95"
             aria-label="Toggle dark/light theme"
           >
-            {mounted && theme === "dark" ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-            )}
+            <span className="relative flex items-center justify-center w-4 h-4 overflow-hidden">
+              <Sun
+                className={`w-4 h-4 text-amber-400 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                  mounted && theme === "dark"
+                    ? "rotate-0 scale-100 opacity-100 drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]"
+                    : "-rotate-90 scale-0 opacity-0"
+                }`}
+              />
+              <Moon
+                className={`w-4 h-4 text-gray-700 dark:text-gray-300 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                  mounted && theme === "light"
+                    ? "rotate-0 scale-100 opacity-100"
+                    : "rotate-90 scale-0 opacity-0"
+                }`}
+              />
+            </span>
           </button>
 
           {/* Mobile Menu Toggle Button */}
