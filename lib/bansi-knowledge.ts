@@ -72,6 +72,13 @@ export const BANSI_KNOWLEDGE: BansiProfile = {
   },
 };
 
+export const DEVELOPER_INFO = {
+  name: "Kaushal Garsaniya",
+  role: "Lead Developer & Portfolio Architect",
+  description:
+    "Kaushal Garsaniya is the talented software developer and collaborator who designed and engineered this entire portfolio website for Bansi Jethava, integrating modern web technologies and AI.",
+};
+
 export const SUGGESTED_QUESTIONS = [
   "Who is Bansi?",
   "What does she study?",

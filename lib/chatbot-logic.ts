@@ -47,6 +47,37 @@ const contactLinks: ContactLink[] = [
 ];
 
 const RULES: MatchRule[] = [
+  // 0. KAUSHAL GARSANIYA (DEVELOPER & ARCHITECT)
+  {
+    category: "developer",
+    priority: 98,
+    exactPhrases: [
+      "who is kaushal garsaniya",
+      "who is kaushal",
+      "do you know who is kaushal garsaniya",
+      "do you know kaushal garsaniya",
+      "do you know kaushal",
+      "who built this website",
+      "who created this website",
+      "who designed this website",
+      "who made this website",
+      "kaushal garsaniya",
+      "tell me about kaushal",
+      "tell me about kaushal garsaniya",
+    ],
+    anyKeywords: [
+      "kaushal garsaniya",
+      "kaushal",
+      "who built this website",
+      "who created this website",
+      "who made this website",
+    ],
+    response: () => ({
+      category: "developer",
+      text: "Kaushal Garsaniya is the talented software developer and collaborator who designed and built this portfolio website for Bansi! 👨‍💻✨ He brought her portfolio to life with modern web design and AI capabilities.",
+    }),
+  },
+
   // 1. THANKS
   {
     category: "thanks",
