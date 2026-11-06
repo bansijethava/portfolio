@@ -10,7 +10,7 @@ import { BANSI_KNOWLEDGE } from "./bansi-knowledge";
 export interface ContactLink {
   label: string;
   url: string;
-  type: "email" | "linkedin";
+  type: "email" | "linkedin" | "web";
 }
 
 export interface ChatResponse {

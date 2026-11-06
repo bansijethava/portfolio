@@ -80,14 +80,19 @@ export async function POST(req: NextRequest) {
         parts: [{ text: SYSTEM_INSTRUCTION }],
       },
       contents,
+      tools: [
+        {
+          googleSearch: {},
+        },
+      ],
       generationConfig: {
         temperature: 0.7,
-        maxOutputTokens: 500,
+        maxOutputTokens: 600,
         topP: 0.9,
       },
     };
 
-    // Use Gemini 2.5 Flash (latest ultra-fast model)
+    // Use Gemini 2.5 Flash (latest ultra-fast model with Google Search Grounding)
     const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
     const res = await fetch(geminiEndpoint, {
@@ -109,8 +114,9 @@ export async function POST(req: NextRequest) {
     }
 
     const data = await res.json();
+    const candidate = data.candidates?.[0];
     const replyText: string =
-      data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+      candidate?.content?.parts?.[0]?.text?.trim() || "";
 
     if (!replyText) {
       const localFallback = getChatbotResponse(message);
@@ -124,7 +130,7 @@ export async function POST(req: NextRequest) {
     // Check if reply involves contact so we can attach convenient action buttons
     const lowerQuery = message.toLowerCase();
     const lowerReply = replyText.toLowerCase();
-    let links: ContactLink[] | undefined = undefined;
+    const links: ContactLink[] = [];
 
     if (
       lowerQuery.includes("contact") ||
@@ -134,7 +140,7 @@ export async function POST(req: NextRequest) {
       lowerReply.includes("email") ||
       lowerReply.includes("linkedin")
     ) {
-      links = [
+      links.push(
         {
           label: "Email Bansi",
           url: `mailto:${BANSI_KNOWLEDGE.contact.email}`,
@@ -144,13 +150,30 @@ export async function POST(req: NextRequest) {
           label: "LinkedIn Profile",
           url: BANSI_KNOWLEDGE.contact.linkedin,
           type: "linkedin",
-        },
-      ];
+        }
+      );
+    }
+
+    // Extract top web search source links if Gemini grounded via Google Search
+    const groundingChunks = candidate?.groundingMetadata?.groundingChunks;
+    if (Array.isArray(groundingChunks) && groundingChunks.length > 0) {
+      const addedUrls = new Set<string>();
+      for (const chunk of groundingChunks) {
+        if (chunk.web?.uri && !addedUrls.has(chunk.web.uri)) {
+          addedUrls.add(chunk.web.uri);
+          links.push({
+            label: chunk.web.title ? `Source: ${chunk.web.title.slice(0, 24)}` : "Web Source",
+            url: chunk.web.uri,
+            type: "web",
+          });
+          if (links.length >= 4) break;
+        }
+      }
     }
 
     return NextResponse.json({
       text: replyText,
-      links,
+      links: links.length > 0 ? links : undefined,
       source: "gemini-ai",
     });
   } catch (err) {

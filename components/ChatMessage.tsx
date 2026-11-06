@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Copy, Check, Mail, ExternalLink } from "lucide-react";
+import { Copy, Check, Mail, ExternalLink, Globe } from "lucide-react";
 import { LinkedInIcon } from "./Icons";
 import { ContactLink } from "@/lib/chatbot-logic";
 
@@ -71,14 +71,16 @@ export default function ChatMessage({ message }: ChatMessageProps) {
                 <a
                   key={idx}
                   href={link.url}
-                  target={link.type === "linkedin" ? "_blank" : undefined}
-                  rel={link.type === "linkedin" ? "noopener noreferrer" : undefined}
+                  target={link.type !== "email" ? "_blank" : undefined}
+                  rel={link.type !== "email" ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-[#1b2537] text-gray-900 dark:text-white border border-gray-200 dark:border-white/15 hover:border-coral-400 dark:hover:border-coral-400 hover:text-coral-500 dark:hover:text-coral-400 transition-all shadow-sm"
                 >
                   {link.type === "email" ? (
                     <Mail className="w-3.5 h-3.5 text-coral-500" />
-                  ) : (
+                  ) : link.type === "linkedin" ? (
                     <LinkedInIcon className="w-3.5 h-3.5 text-coral-500" />
+                  ) : (
+                    <Globe className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                   )}
                   <span>{link.label}</span>
                   <ExternalLink className="w-3 h-3 opacity-60 ml-0.5" />
