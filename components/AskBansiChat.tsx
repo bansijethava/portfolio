@@ -85,7 +85,7 @@ export default function AskBansiChat() {
 
   // Handle sending a message
   const handleSendMessage = useCallback(
-    (textToSend?: string) => {
+    async (textToSend?: string) => {
       const text = (textToSend ?? inputMessage).trim();
       if (!text || isTyping) return;
 
@@ -100,23 +100,59 @@ export default function AskBansiChat() {
       setInputMessage("");
       setIsTyping(true);
 
-      // Realistic typing delay (450ms - 600ms)
-      const delay = 450 + Math.random() * 150;
-      setTimeout(() => {
-        const botAnswer = getChatbotResponse(text);
-        const botMsg: MessageItem = {
-          id: `bot-${Date.now()}`,
-          sender: "bot",
-          text: botAnswer.text,
-          timestamp: getFormattedTime(),
-          links: botAnswer.links,
-        };
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: text,
+            history: messages.slice(-6).map((m) => ({
+              sender: m.sender,
+              text: m.text,
+            })),
+          }),
+        });
 
-        setMessages((prev) => [...prev, botMsg]);
+        if (res.ok) {
+          const data = await res.json();
+          const botMsg: MessageItem = {
+            id: `bot-${Date.now()}`,
+            sender: "bot",
+            text: data.text,
+            timestamp: getFormattedTime(),
+            links: data.links,
+          };
+          setMessages((prev) => [...prev, botMsg]);
+        } else {
+          const botAnswer = getChatbotResponse(text);
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: `bot-${Date.now()}`,
+              sender: "bot",
+              text: botAnswer.text,
+              timestamp: getFormattedTime(),
+              links: botAnswer.links,
+            },
+          ]);
+        }
+      } catch {
+        const botAnswer = getChatbotResponse(text);
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: `bot-${Date.now()}`,
+            sender: "bot",
+            text: botAnswer.text,
+            timestamp: getFormattedTime(),
+            links: botAnswer.links,
+          },
+        ]);
+      } finally {
         setIsTyping(false);
-      }, delay);
+      }
     },
-    [inputMessage, isTyping]
+    [inputMessage, isTyping, messages]
   );
 
   // Keydown handler for input
@@ -220,7 +256,7 @@ export default function AskBansiChat() {
                   </span>
                 </div>
                 <p className="text-[11px] text-white/90 leading-tight">
-                  Bansi&apos;s Portfolio Assistant
+                  Bansi&apos;s AI Assistant • Powered by Gemini
                 </p>
               </div>
             </div>
@@ -330,7 +366,7 @@ export default function AskBansiChat() {
               </button>
             </form>
             <p className="text-[10px] text-center text-gray-400 dark:text-gray-500 mt-2">
-              Virtual Assistant • 100% Client-Side • Instant Responses
+              AI Assistant • Powered by Google Gemini
             </p>
           </div>
         </div>
