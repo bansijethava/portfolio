@@ -157,7 +157,7 @@ export default function Navbar() {
         {/* LHS: Brand Name */}
         <Link
           href="#home"
-          className="select-none group px-3 py-1.5 rounded-full bg-[#FFF2F1] dark:bg-[#0F1520]/90 border border-[#FFD6D3] dark:border-white/[0.12] shadow-[0_4px_20px_rgba(255,87,87,0.08)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] backdrop-blur-md lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0"
+          className="select-none group p-0 bg-transparent border-0 shadow-none"
           aria-label="Bansi Jethava - Home"
         >
           <span className="text-base sm:text-xl md:text-2xl font-bold tracking-tight text-[#111827] dark:text-[#F1F5F9] leading-tight">
