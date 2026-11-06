@@ -386,3 +386,4 @@ export function getChatbotResponse(rawQuery: string): ChatResponse {
     text: "That's an interesting question! 😊 I don't have that information about Bansi right now. You can explore her portfolio or contact her directly for more details.",
   };
 }
+

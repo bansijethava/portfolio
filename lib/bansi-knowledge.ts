@@ -80,3 +80,4 @@ export const SUGGESTED_QUESTIONS = [
   "Does she have projects?",
   "How can I contact her?",
 ] as const;
+

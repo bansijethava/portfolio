@@ -34,9 +34,9 @@ export default function ChatMessage({ message }: ChatMessageProps) {
 
   if (isUser) {
     return (
-      <div className="flex justify-end mb-3 animate-in fade-in slide-in-from-bottom-1 duration-200">
+      <div className="flex justify-end mb-3">
         <div className="max-w-[82%] sm:max-w-[78%]">
-          <div className="bg-[#FF5757] text-white px-4 py-2.5 rounded-2xl rounded-br-xs shadow-sm text-sm font-normal leading-relaxed break-words">
+          <div className="bg-[#FF5757] text-white px-4 py-2.5 rounded-2xl rounded-br-sm shadow-sm text-sm font-normal leading-relaxed break-words">
             {message.text}
           </div>
           <div className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 pr-1 text-right">
@@ -48,9 +48,9 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   }
 
   return (
-    <div className="flex justify-start items-start gap-2.5 mb-3 animate-in fade-in slide-in-from-bottom-1 duration-200">
+    <div className="flex justify-start items-start gap-2.5 mb-3">
       {/* Bot Avatar */}
-      <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 border border-coral-200 dark:border-white/15 bg-coral-50 dark:bg-[#1a2333] shadow-xs mt-0.5">
+      <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 border border-coral-200 dark:border-white/15 bg-coral-50 dark:bg-[#1a2333] shadow-sm mt-0.5">
         <Image
           src="/images/bansi-cutout.png"
           alt="Ask Bansi"
@@ -61,7 +61,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
       </div>
 
       <div className="max-w-[85%] sm:max-w-[82%] group">
-        <div className="bg-gray-100 dark:bg-[#131B2A] text-gray-800 dark:text-gray-100 border border-gray-200/80 dark:border-white/10 px-4 py-3 rounded-2xl rounded-tl-xs shadow-xs text-sm leading-relaxed break-words">
+        <div className="bg-gray-100 dark:bg-[#131B2A] text-gray-800 dark:text-gray-100 border border-gray-200/80 dark:border-white/10 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm text-sm leading-relaxed break-words">
           <p className="whitespace-pre-line">{message.text}</p>
 
           {/* Interactive Contact Link Pills if available */}
@@ -73,7 +73,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
                   href={link.url}
                   target={link.type === "linkedin" ? "_blank" : undefined}
                   rel={link.type === "linkedin" ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-[#1b2537] text-gray-900 dark:text-white border border-gray-200 dark:border-white/15 hover:border-coral-400 dark:hover:border-coral-400 hover:text-coral-500 dark:hover:text-coral-400 transition-all shadow-xs"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-[#1b2537] text-gray-900 dark:text-white border border-gray-200 dark:border-white/15 hover:border-coral-400 dark:hover:border-coral-400 hover:text-coral-500 dark:hover:text-coral-400 transition-all shadow-sm"
                 >
                   {link.type === "email" ? (
                     <Mail className="w-3.5 h-3.5 text-coral-500" />
@@ -92,6 +92,7 @@ export default function ChatMessage({ message }: ChatMessageProps) {
         <div className="flex items-center justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-1 px-1">
           <span>{message.timestamp}</span>
           <button
+            type="button"
             onClick={handleCopy}
             className="opacity-70 group-hover:opacity-100 hover:text-coral-500 dark:hover:text-coral-400 transition-opacity p-0.5 rounded flex items-center gap-1 cursor-pointer"
             title="Copy response"
